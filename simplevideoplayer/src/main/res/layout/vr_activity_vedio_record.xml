@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_vedio_record"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <FrameLayout
+        android:id="@+id/libVideoRecorder_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+
+    <CheckBox
+        android:id="@+id/cb_record"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="48dp"
+        android:text="点击拍"
+        android:gravity="center"
+        android:textSize="@dimen/vr_text_12"
+        android:textColor="@color/vr_maincolor"
+        android:button="@null"
+        android:background="@drawable/vr_selector_record"
+        />
+
+    <com.aerozhonghuan.videorecordlibrary.view.VideoProgressView
+        android:id="@+id/libVideoRecorder_progress"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:vrRingWidth="4dp"
+        app:vrRingColor="@color/vr_progresscolor"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="48dp"
+        android:visibility="gone"
+        />
+     <include
+         android:id="@+id/include_play"
+         android:visibility="gone"
+         layout="@layout/vr_include_video_play"
+         />
+</FrameLayout>

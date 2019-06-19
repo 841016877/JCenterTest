@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundView">
+        <!--圆环半径-->
+        <attr name="vrRadius" format="dimension"/>
+        <!--圆环宽度-->
+        <attr name="vrRingWidth" format="dimension"/>
+        <!--圆环颜色-->
+        <attr name="vrRingColor" format="color"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_video_play"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="#000"
+    >
+    <VideoView
+        android:id="@+id/libPlayVideo_videoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="48dp"
+        android:layout_centerHorizontal="true"
+        >
+        <ImageButton
+            android:id="@+id/ib_return"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/vr_ic_cancel"
+            android:background="@color/vr_transparent"
+            android:onClick="cancel"
+            android:layout_centerInParent="true"
+            />
+        <ImageButton
+            android:id="@+id/ib_ok"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/vr_ic_ok"
+            android:background="@color/vr_transparent"
+            android:onClick="ok"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
