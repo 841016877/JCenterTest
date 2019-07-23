@@ -15,7 +15,7 @@ import org.junit.Test;
 public class DNActivityThread {
     @Test
     public void main() {
-        DNLooper.prepare();
+        /*DNLooper.prepare();
         // 创建handler对象
         final DNHandler handler = new DNHandler() {
             @Override
@@ -49,6 +49,6 @@ public class DNActivityThread {
                 handler.sendMessage(msg);
             }
         }).start();
-        DNLooper.loop();
+        DNLooper.loop();*/
     }
 }
