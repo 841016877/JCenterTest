@@ -35,13 +35,13 @@ android {
         debug {
             minifyEnabled false
             signingConfig signingConfigs.debug
-            buildConfigField "String", "BASE_URL", "$BASE_URL"
+            buildConfigField "String", "BASE_URL", "\"$BASE_URL\""
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         release {
             minifyEnabled false
             signingConfig signingConfigs.release
-            buildConfigField "String", "BASE_URL", "$BASE_URL"
+            buildConfigField "String", "BASE_URL", "\"$BASE_URL\""
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
