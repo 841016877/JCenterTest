@@ -44,7 +44,28 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
+def isJenkins = { ->
+    def var1 = System.getenv("IS_JENKINS")
+    if (var1) {
+        return var1
+    }
+    return false
+}
+def getBuildType = { ->
+    def var1 = System.getenv("BASE_URL")
+    if (var1) {
+        return var1
+    }
+    return null
+}
+def getBaseUrl = { ->
+    def var1 = System.getenv("BASE_URL")
+    if (var1) {
+        return var1
+    }
+    return null
+}
 
-println "#读取环境参数,是否处于Jenkins编译环境： $System.getenv(\"IS_JENKINS\")}"
-println "#读取环境参数,BUILD_TYPE is： $System.getenv(\"BUILD_TYPE\")"
-println "#读取环境参数,BASE_URL is： $System.getenv(\"BASE_URL\")"
+println "#读取环境参数,是否处于Jenkins编译环境： $isJenkins}"
+println "#读取环境参数,BUILD_TYPE is： $getBuildType)"
+println "#读取环境参数,BASE_URL is： $getBaseUrl)"
