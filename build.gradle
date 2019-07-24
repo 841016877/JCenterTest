@@ -52,7 +52,7 @@ def isJenkins = { ->
     return false
 }
 def getBuildType = { ->
-    def var1 = System.getenv("BASE_URL")
+    def var1 = System.getenv("BUILD_TYPE")
     if (var1) {
         return var1
     }
@@ -66,6 +66,12 @@ def getBaseUrl = { ->
     return null
 }
 
-println "#读取环境参数,是否处于Jenkins编译环境： $isJenkins}"
-println "#读取环境参数,BUILD_TYPE is： $getBuildType)"
-println "#读取环境参数,BASE_URL is： $getBaseUrl)"
+ext {
+    IS_JENKINS = isJenkins()
+    BUILD_TYPE = getBuildType()
+    BASE_URL = getBaseUrl()
+}
+
+println "#读取环境参数,是否处于Jenkins编译环境： $IS_JENKINS"
+println "#读取环境参数,BUILD_TYPE is： $BUILD_TYPE"
+println "#读取环境参数,BASE_URL is： $BASE_URL"
