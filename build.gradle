@@ -43,3 +43,8 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+
+println "#读取环境参数,是否处于Jenkins编译环境： $System.getenv(\"IS_JENKINS\")}"
+println "#读取环境参数,BUILD_TYPE is： $System.getenv(\"BUILD_TYPE\")"
+println "#读取环境参数,BASE_URL is： $System.getenv(\"BASE_URL\")"
